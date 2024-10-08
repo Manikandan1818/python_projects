@@ -27,8 +27,9 @@ scissor ='''
 ---.__(___)
 '''
 
-
+# List
 game_Images = [rock, paper, scissor]
+
 user_choice = int(input("What do you choose? Type 0 for Rock, 1 for paper and 2 for scissors.\n"))
 print(game_Images[user_choice])
 computer_choice = random.randint(0, 2)
