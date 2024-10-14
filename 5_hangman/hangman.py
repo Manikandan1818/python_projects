@@ -5,11 +5,27 @@ word_list = ["manikandan", "dhanya", "vigneshwari"]
 chosen_word = random.choice(word_list)
 print(chosen_word)
 
-guess = input("Guess a letter: ").lower()
-print(guess)
+placeholder = ""
+word_length = len(chosen_word)
+for position in range(word_length):
+    placeholder += "_"
+print(placeholder)
 
-for letter in chosen_word:
-    if letter == guess:
-        print(letter)
-    else:
-        print("-")
+game_over = False
+
+while not game_over:
+    guess = input("Guess a letter: ").lower()
+        
+    display =""
+
+    for letter in chosen_word:
+        if letter == guess:
+            display += letter
+        else:
+            display += "_"
+    print(display)
+
+    if "_" not in display:
+        game_over = True
+        print("You win")
+
