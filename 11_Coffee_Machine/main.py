@@ -42,8 +42,7 @@ def process_rupees():
     """Returns the total calculated from rupees inserted."""
     print("Please insert amount between 50 to 100.")
     total = int(input("How many 50 rupees?: ")) * 50
-    total += int(input("How many 100 rupees?: ")) * 100    
-    print(total)
+    total += int(input("How many 100 rupees?: ")) * 100
     return total
 
 def is_transction_sucessful(money_received, drink_cost):
