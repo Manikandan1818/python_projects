@@ -49,7 +49,7 @@ def is_transction_sucessful(money_received, drink_cost):
     """Returns True when the payment accepted, False if money is in sufficient"""
     if money_received >= drink_cost:
         change = round(money_received - drink_cost, 2)
-        print(f"Here is {change} in change.")
+        print(f"Here is {change} in change. Enjoy your {choice} coffee.")
         global profit
         profit += drink_cost
         return True
@@ -60,7 +60,7 @@ def is_transction_sucessful(money_received, drink_cost):
 
 is_on = True
 while is_on:
-    choice = input("What would you like? (espresso/latte/cappuccino):")
+    choice = input("What would you like? (Espresso - Rs.150 / Latte - Rs. 250 /Cappuccino - Rs.300):")
     if choice == "off":
         is_on = False
     elif choice == "report":
